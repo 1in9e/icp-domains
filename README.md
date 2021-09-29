@@ -10,6 +10,8 @@
 ### Usage
 python icp_domains.py example.com
 
+![example](./example.jpg)
+
 例如OPPO.COM
 ```
 (py3env) ➜ python icp_domains.py oppo.com
@@ -333,6 +335,14 @@ byteq8u.net
 bvfcdn.com
 bfcdnrd.com
 ```
+
+### Version
+#### v0.2
+- 修复另一类icp格式(如"浙B2-20080224-1")的相关域名查询
+
+#### v0.1
+- 创建项目
+
 
 ### Thanks
 > 特别说明，备案号查多个备案详情来自于如下项目:

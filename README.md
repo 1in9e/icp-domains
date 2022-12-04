@@ -337,6 +337,9 @@ bfcdnrd.com
 ```
 
 ### Version
+#### v0.3 
+- [fix bug: issues/2 修复源站字段名更改引发的报错](https://github.com/1in9e/icp-domains/issues/2)
+
 #### v0.2
 - 修复另一类icp格式(如"浙B2-20080224-1")的相关域名查询
 

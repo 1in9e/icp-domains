@@ -10,7 +10,7 @@ icp查询from https://github.com/wongzeon/ICP-Checker
     接口<2>存在滑动验证码，利用cv2进行破解
 """
 
-import requests,hashlib,time,base64,cv2,os,sys,json
+import requests, hashlib, time, base64, cv2, os, sys, json
 
 def main(domain):
     try:
@@ -178,18 +178,18 @@ def main(domain):
         start_row = info_request.json()['params']['startRow']
         end_row = info_request.json()['params']['endRow']
 
-        print("\n[*] 查询对象",info,"共有",domain_total,"个备案域名")
+        print("\n[*] 查询对象", info, "共有", domain_total, "个备案域名")
         print("[+] 域名具体信息如下：")
         domain_list = []
         for i in range(1,page_total+1):
-            for k in range(start_row,end_row+1):
+            for k in range(start_row, end_row+1):
                 info_base = info_request.json()['params']['list'][k]
                 domain_name = info_base['domain']
                 domain_list.append(domain_name)
                 domain_type = info_base['natureName']
                 domain_licence = info_base['mainLicence']
                 domain_web_licence = info_base['serviceLicence']
-                domain_site_name = info_base['serviceName']
+                domain_site_name = info_base['unitName']
                 domain_status = info_base['limitAccess']
                 domain_approve_date = info_base['updateRecordTime']
                 domain_owner = info_base['unitName']
@@ -227,7 +227,7 @@ def main(domain):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("---ICP查关联域名--- by _lin9e")
+        print("---ICP查关联域名--- V0.3 by _lin9e")
         print("Usage: {} 'domain'".format(sys.argv[0]))
         print("例如: python icp_domains.py oppo.com")
     else:
